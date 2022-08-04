@@ -49,7 +49,8 @@ onBeforeUpdate(() => {
   blockElements.value = []
 })
 
-const blockElements = ref<typeof BlockComponent[]>([])
+const blockElements = ref<Array<typeof BlockComponent>>([])
+let testBlock = ref<InstanceType<typeof BlockComponent>>();
 
 function scrollIntoView () {
   const selection = window.getSelection()
